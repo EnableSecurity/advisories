@@ -105,7 +105,7 @@ Note that sometimes the OpenID login method is hidden but the functionality is n
 ## Solutions and recommendations
 
 Upgrading to the latest version of Liferay should address this
-security vulnerability.
+security vulnerability. The patch was published at the following location: <https://sourceforge.net/projects/liferay-patches/files/6.2.3%20GA4/>
 
 Additionally, to address this issue it is recommended to disable
 OpenID support.
