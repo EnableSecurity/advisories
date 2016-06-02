@@ -115,3 +115,16 @@ OpenID support.
 
 - <http://openid.net/2011/05/05/attribute-exchange-security-alert/>
 - <https://code.google.com/p/chromium/issues/detail?id=240139>
+
+## About Enable Security
+
+[Enable Security](https://www.enablesecurity.com) provides Information Security services, including Penetration Testing, Research and Development, to help protect client networks and applications against online attackers.
+
+## Disclaimer
+
+Disclaimer: The information in the advisory is believed to be accurate at the
+time of publishing based on currently available information. Use of the
+information constitutes acceptance for use in an AS IS condition. There are no
+warranties with regard to this information. Neither the author nor the publisher
+accepts any liability for any direct, indirect, or consequential loss or damage
+arising from use of, or reliance on, this information.
