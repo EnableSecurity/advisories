@@ -122,7 +122,7 @@ OpenID support.
 
 ## Disclaimer
 
-Disclaimer: The information in the advisory is believed to be accurate at the
+The information in the advisory is believed to be accurate at the
 time of publishing based on currently available information. Use of the
 information constitutes acceptance for use in an AS IS condition. There are no
 warranties with regard to this information. Neither the author nor the publisher
