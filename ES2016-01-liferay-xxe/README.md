@@ -3,6 +3,7 @@
 - Author: Sandro Gauci <sandro@enablesecurity.com>
 - Vulnerable version: Liferay 6.2.3 CE GA4 and earlier
 - Liferay reference: LPS-58014
+- Advisory URL: <https://github.com/EnableSecurity/advisories/tree/master/ES2016-01-liferay-xxe>
 - Timeline:
 	- Report date: March 16 2015
 	- Liferay patch: August 26 2015
