@@ -20,7 +20,7 @@ A specially crafted SIP message with a malformed multipart body was found to cau
 
 ## Impact
 
-Abuse of this vulnerability leads to denial of service in Asterisk when `chan_pjsip` is in use. This vulnerability is likely to affect other code that makes use of PJSIP.
+Abuse of this vulnerability leads to denial of service (DoS), and potentially remote code execution (RCE), in Asterisk when `chan_pjsip` is in use. This vulnerability is likely to affect other code that makes use of PJSIP.
 
 ## How to reproduce the issue
 
