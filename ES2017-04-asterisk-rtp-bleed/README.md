@@ -13,7 +13,7 @@
     - New report date: 2017-05-17
     - Vendor patch provided for testing: 2017-05-23
     - Vendor advisory: 2017-08-31
-    - Enable Security advisory: 2017-08-31
+    - Enable Security advisory: 2017-09-01
 
 ## Description
 
