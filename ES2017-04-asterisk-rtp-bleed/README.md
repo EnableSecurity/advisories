@@ -4,7 +4,7 @@
 	- Klaus-Peter Junghanns <kapejod@gmail.com>
 	- Sandro Gauci <sandro@enablesecurity.com>
 - Vulnerable version: Asterisk 11.4.0 to 14.6.1 (fix incomplete)
-- References: AST-2017-005, CVE-2017-14099
+- References: [AST-2017-005](http://downloads.asterisk.org/pub/security/AST-2017-005.html), [AST-2017-008](http://downloads.asterisk.org/pub/security/AST-2017-008.html), CVE-2017-14099
 - Advisory URL: <https://github.com/EnableSecurity/advisories/tree/master/ES2017-04-asterisk-rtp-bleed>
 - Timeline:
 	- First report date: 2011-09-11
@@ -14,6 +14,7 @@
     - Vendor patch provided for testing: 2017-05-23
     - Vendor advisory: 2017-08-31
     - Enable Security advisory: 2017-09-01
+    - Vendor updated advisory: 2017-09-19
 
 ## Description
 
@@ -41,15 +42,18 @@ We have the following recommendations:
 
 Note that as for the time of writing, the official Asterisk fix is vulnerable to a race condition. An attacker may continuously _spray_ an Asterisk server with RTP packets. This allows the attacker to send RTP within those first few packets and still exploit this vulnerability.
 
-The official Asterisk fix also does not properly validate very short RTCP packets (e.g. 4 octets, see [rtcpnatscan](https://github.com/kapejod/rtpnatscan) to reproduce the problem) resulting in an out of bounds read disabling SSRC matching.
-This makes Asterisk vulnerable to RTCP hijacking of **ongoing** calls. An attacker can extract RTCP sender reports containing the SSRCs of both RTP endpoints.
+The first Asterisk fix did not properly validate very short RTCP packets (e.g. 4 octets, see [rtcpnatscan](https://github.com/kapejod/rtpnatscan) to reproduce the problem) resulting in an out of bounds read disabling SSRC matching.
+This made Asterisk vulnerable to RTCP hijacking of **ongoing** calls. An attacker can extract RTCP sender reports containing the SSRCs of both RTP endpoints.
 
 A patch for this is available at (https://raw.githubusercontent.com/kapejod/rtpnatscan/master/patches/asterisk/too-short-rtcp-bugfix.diff)
+
+Asterisk issued an official advisory and patch for this second vulnerability. More details can be found at <http://downloads.asterisk.org/pub/security/AST-2017-008.html>
 
 ## References
 
 - [Kamailio World 2017: Listening By Speaking - Security Attacks On Media Servers And RTP Relays](https://www.youtube.com/watch?v=cAia1owHy68)
 - [27C3: Having fun with RTP by Kapejod](https://www.youtube.com/watch?v=cp7VDRC-RcY)
+- Official patches: [AST-2017-005](http://downloads.asterisk.org/pub/security/AST-2017-005.html), [AST-2017-008](http://downloads.asterisk.org/pub/security/AST-2017-008.html)
 
 
 ## About Enable Security
