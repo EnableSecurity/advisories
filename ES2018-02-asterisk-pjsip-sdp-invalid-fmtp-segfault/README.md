@@ -17,7 +17,7 @@
 ## Description
 
 A specially crafted SDP message body with an invalid fmtp attribute causes a
-segmentation fault in asterisk using chan_pjsip.
+segmentation fault in asterisk using `chan_pjsip`.
 
 
 ## Impact
