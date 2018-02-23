@@ -55,7 +55,7 @@ m=audio 17000 RTP/AVP 4294967296
 Notes: 
 
 - authentication may be required 
-- the destination SIP address should match a valid extension in the dialplan.
+- the destination SIP address should match a valid extension in the dialplan
 
 To facilitate this process we wrote the following python program to reproduce this issue:
 
