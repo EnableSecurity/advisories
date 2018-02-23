@@ -162,7 +162,7 @@ GDB Output:
 #21 0x0000000000000000 in ?? ()
 ```
 
-By increasing the amount of `Accept` headers in the python script, we see stack smashing actually occuring. Although this may not work on UDP due to packet limitations, it has been verified to work on TLS/TCP. The above script would need to be slightly modified to create 64 `Accept` headers each with a value of 100 bytes, as follows:
+By increasing the amount of `Accept` headers in the python script, we see stack smashing actually occurring. Although this may not work on UDP due to packet limitations, it has been verified to work on TLS/TCP. The above script would need to be slightly modified to create 64 `Accept` headers each with a value of 100 bytes, as follows:
 
 ```python
             for _ in range(64):
