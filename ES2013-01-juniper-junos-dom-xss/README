@@ -1,0 +1,91 @@
+
+__________________________________________________________________
+
+   Client-side cross site scripting in Juniper VPN SSL solution
+__________________________________________________________________
+
+
+Advisory URL: 
+<http://resources.enablesecurity.com/advisories/juniper-vpn-ssl-domxss.txt>
+
+Vendor advisory:
+<http://kb.juniper.net/InfoCenter/index?page=content&id=JSA10589>
+
+Vulnerable product that was tested:
+Model:  MAG-2600
+Version: 7.2R3 (build 21397)
+
+CVE: CVE-2013-5649
+ 
+Description: 
+
+The Juniper VPN SSL system was found to be vulnerable to a client-side cross
+site scripting vulnerability. 
+
+# Impact
+
+Exploitation of this vulnerability may allow hijack of VPN SSL sessions. This
+usually involves a social engineering attack in order to convince a logged in
+victim to click on an attacker-supplied URL. Therefore such an attack would
+typically be the result of a targeted attack rather than an opportunistic one.
+
+Credits:
+Sandro Gauci <mailto:sandro@enablesecurity.com>
+
+
+Timeline:
+
+Nov 26, 2012: Vulnerability discovered
+Dec 19, 2012: Vulnerability report sent to vendor
+Sep 12, 2013: Vendor fix released
+
+__________________________________________________________________
+
+
+
+# How to reproduce the issue 
+
+The vulnerable HTML was:
+
+	<?xml version="1.0" encoding="utf-8"?>
+	<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Frameset//EN">
+	<!-- saved from url=(0022)http://www.juniper.net -->
+	<html><head><title>Secure Access Service End User Guide</title></head><script type="text/javascript">
+					var fname='main';
+					var url = self.location.href;
+					var file;
+					if(url.indexOf('?') > 0){
+						file = url.substring(url.lastIndexOf('?')+1);
+					}else{
+						file = 'Secure-Access-Service-title.html';
+					}
+					var frameset = '<frameset rows="90,*"><frame name="header" frameborder="0" marginheight="0" marginwidth="0" noresize="1" scrolling="no" src="j_header.html"><frameset cols="350,*" id="content"><frame name="tocframe" target="main" frameborder="0" marginheight="0" marginwidth="0" scrolling="auto" src="j_primary_toc.html"><frame name="main" frameborder="0" marginheight="0" marginwidth="0" id="mainframe" scrolling="auto" src="'+ file + '"></frameset></frameset>';
+					document.write(frameset);
+	</script></html>
+
+Since file is being written and rendered to the HTML without any validation or
+filtering, the web browser executes any URL that specified as file after the ?
+in the URL. Therefore a URL such as the following would execute the JavaScript
+function alert(123) as a demonstration:
+
+<https://vpnsystem/dana-cached/help/en/SA-User-Help/help.html?javascript:alert(123)>
+
+A more realistic example of exploitation would include leakage of the session
+cookie (through access to document.cookie within JavaScript) or execution of
+actions on behalf of the victim's logged in web browser.
+
+About EnableSecurity:
+
+Established in 2008 and now based in London, Enable Security is focused on
+providing quality and value to its customers by thinking like an attacker
+while giving elegant and practical security solutions. Enable Security was
+founded by Sandro Gauci who has over 13 years experience in the security
+industry and has contributed to the community through security tools, research
+papers and advisories. He is published at elite conferences such as Hack in
+the Box, ShakaCon and POC as well as communications industry conferences such
+as AstriCon and Realtime communications.
+
+EnableSecurity routinely provides its penetration testing and security
+research services to clientele across various industries including software,
+gaming, gambling, credit-card processors and communications organisations and
+can be contacted at info@enablesecurity.com.
