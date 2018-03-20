@@ -4,7 +4,7 @@
     - Alfred Farrugia <alfred@enablesecurity.com>
     - Sandro Gauci <sandro@enablesecurity.com>
 - Fixed versions: Kamailio v5.1.2, v5.0.6 and v4.4.7
-- References: no CVE assigned yet
+- References: CVE-2018-8828
 - Enable Security Advisory: <https://github.com/EnableSecurity/advisories/tree/master/ES2018-05-kamailio-heap-overflow>
 - Tested vulnerable versions: 5.1.1, 5.1.0, 5.0.0
 - Timeline:
