@@ -67,7 +67,7 @@ while True:
     time.sleep(5)
 ```
 
-In the case of a vulnerable version of Kamailio, Asterisk would respond with a 200 OK while in a fix version, you would get a 603 Decline response.
+In the case of a vulnerable version of Kamailio, Asterisk would respond with a 200 OK while in a fixed version, Asterisk would respond with a 603 Decline response. This is specific to the [dialplan](https://github.com/EnableSecurity/advisories/blob/master/ES2020-01-kamailio-remove-hf/repro/asterisk/config/extensions.conf) in our example, which jumps to an internal dialplan if the `X-bypass-me` header is found.
 
 ## Solutions and recommendations
 
