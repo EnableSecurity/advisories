@@ -13,6 +13,8 @@
 
 Kamailio is often configured to remove certain special internal SIP headers from untrusted traffic to protect against header injection attacks by making use of the `remove_hf` function from the Kamailio `textops` module. These SIP headers were typically set through Kamailio which are then used downstream, e.g. by a media service based on Asterisk, to affect internal business logic decisions. During our tests and research, we noticed that the removal of these headers can be bypassed by injecting whitespace characters at the end of the header name.
 
+Note that this issue only affected header names that are __not__ defined in `src/core/parser/hf.h`.
+
 Further discussion and details of this vulnerability can be found at the Communication Breakdown blog: https://www.rtcsec.com/2020/09/01-smuggling-sip-headers-ftw/.
 
 ## Impact
