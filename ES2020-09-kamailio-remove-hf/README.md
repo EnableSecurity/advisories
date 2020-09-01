@@ -65,6 +65,8 @@ while True:
     time.sleep(5)
 ```
 
+In the case of a vulnerable version of Kamailio, Asterisk would respond with a 200 OK while in a fix version, you would get a 603 Decline response.
+
 ## Solutions and recommendations
 
 The official Kamailio fix has been tested and found to sufficiently address this security flaw. We recommend making use of the latest release or backporting the fixes where possible. Making use of regular expressions to cover white-space characters with `remove_hf_re` has been suggested as mitigation for this issue for cases where the code cannot be upgraded.
