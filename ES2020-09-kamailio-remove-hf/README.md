@@ -21,7 +21,7 @@ The impact of this security bypass greatly depends on how these headers are used
 
 ## How to reproduce the issue
 
-We prepared a docker-compose environment to demonstrate a vulnerable setup which can be found at <https://github.com/EnableSecurity/advisories/tree/master/ES2020-09-kamailio-remove-hf/repro>. The following python code could then be used to reproduce the issue:
+We prepared a docker-compose environment to demonstrate a vulnerable setup which can be found at <https://github.com/EnableSecurity/advisories/tree/master/ES2020-01-kamailio-remove-hf/repro>. The following python code could then be used to reproduce the issue:
 
 ```python
 #!/usr/bin/env python3
