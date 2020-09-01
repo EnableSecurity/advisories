@@ -1,0 +1,17 @@
+version: '3.7'
+
+services: 
+  asterisk:
+    build: 
+      context: asterisk
+      args: 
+      - ASTERISK_VERSION=17.5.1
+    network_mode: "host"
+  kamailio:
+    build:
+      context: kamailio
+      args:
+      - KAMAILIO_VERSION=5.3.5
+    depends_on: 
+        - asterisk
+    network_mode: "host"
