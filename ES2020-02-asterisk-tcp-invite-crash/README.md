@@ -1,4 +1,4 @@
-# Asterisk crashes due to INVITE flood over TCP
+# Asterisk crash due to INVITE flood over TCP
 
 - Fixed versions: 13.37.1, 16.14.1, 17.8.1, 18.0.1
 - Enable Security Advisory: https://github.com/EnableSecurity/advisories/tree/master/ES2020-02-asterisk-tcp-invite-crash
