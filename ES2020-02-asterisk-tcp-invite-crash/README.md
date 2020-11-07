@@ -3,6 +3,7 @@
 - Fixed versions: 13.37.1, 16.14.1, 17.8.1, 18.0.1
 - Enable Security Advisory: https://github.com/EnableSecurity/advisories/tree/master/ES2020-02-asterisk-tcp-invite-crash
 - Asterisk Security Advisory: https://downloads.asterisk.org/pub/security/AST-2020-001.html
+- References: AST-2020-001, CVE-2020-28327
 - Tested vulnerable versions: 17.5.1, 17.6.0
 - Timeline:
     - Report date: 2020-08-31
