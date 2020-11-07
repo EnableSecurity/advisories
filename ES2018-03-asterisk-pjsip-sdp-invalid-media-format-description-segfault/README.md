@@ -4,7 +4,7 @@
     - Alfred Farrugia <alfred@enablesecurity.com>
     - Sandro Gauci <sandro@enablesecurity.com>
 - Latest vulnerable version: Asterisk 15.2.0 running `chan_pjsip`
-- References: AST-2018-002
+- References: AST-2018-002, CVE-2018-1000098
 - Enable Security Advisory: <https://github.com/EnableSecurity/advisories/tree/master/ES2018-03-asterisk-pjsip-sdp-invalid-media-format-description-segfault>
 - Vendor Advisory: <http://downloads.asterisk.org/pub/security/AST-2018-002.html>
 - Tested vulnerable versions: 13.10.0, 15.1.3, 15.1.4, 15.1.5, 15.2.0

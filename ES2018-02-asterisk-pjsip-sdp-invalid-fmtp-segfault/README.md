@@ -4,7 +4,7 @@
     - Alfred Farrugia <alfred@enablesecurity.com>
     - Sandro Gauci <sandro@enablesecurity.com>
 - Latest vulnerable version: Asterisk 15.2.0 running `chan_pjsip`
-- References: AST-2018-003
+- References: AST-2018-003, CVE-2018-1000099
 - Enable Security Advisory: <https://github.com/EnableSecurity/advisories/tree/master/ES2018-02-asterisk-pjsip-sdp-invalid-fmtp-segfault/>
 - Vendor Advisory: <http://downloads.asterisk.org/pub/security/AST-2018-003.html>
 - Timeline:
