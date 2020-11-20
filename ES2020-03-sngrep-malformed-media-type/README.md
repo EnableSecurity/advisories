@@ -40,7 +40,8 @@ Since most modern build systems will automatically include run-time best practic
 ## How to reproduce the issue
 
 1. Run `sngrep`
-1. Execute the following python program:
+1. Execute the below python program
+1. Notice that `sngrep` has crashed
 
 ```python
 import socket
@@ -73,7 +74,7 @@ sip_msg="INVITE sip:bob_1@127.0.0.1:5060 SIP/2.0\r\n" + \
 sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
 sock.sendto(sip_msg.encode(), ("127.0.0.1", 5060))
 ```
-1. Notice that `sngrep` has crashed
+
 
 ## Solutions and recommendations
 
