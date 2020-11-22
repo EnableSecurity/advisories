@@ -2,6 +2,7 @@
 
 - Fixed versions: Kamailio v5.4.0
 - Enable Security Advisory: <https://github.com/EnableSecurity/advisories/tree/master/ES2020-01-kamailio-remove-hf>
+- References: CVE-2020-28361
 - Tested vulnerable versions: 5.3.5 and earlier
 - Timeline:
     - Report date & issue patched by Kamailio:  2020-07-16
