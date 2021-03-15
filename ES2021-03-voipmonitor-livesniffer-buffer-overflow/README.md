@@ -4,6 +4,7 @@
 - Enable Security Advisory: https://github.com/EnableSecurity/advisories/tree/master/ES2021-03-voipmonitor-livesniffer-buffer-overflow
 - VoIPmonitor Security Advisory: none, changelog references fixes at https://www.voipmonitor.org/changelog-sniffer
 - Tested vulnerable versions: 27.5
+- References: CVE-2021-1000005
 - Timeline:
     - Report date: 2021-02-10
 	- Triaged: 2021-02-12
