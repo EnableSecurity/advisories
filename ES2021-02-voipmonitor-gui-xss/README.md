@@ -4,6 +4,7 @@
 - Enable Security Advisory: https://github.com/EnableSecurity/advisories/tree/master/ES2021-02-voipmonitor-gui-xss
 - VoIPmonitor Security Advisory: none, changelog references fixes at https://www.voipmonitor.org/changelog-gui?major=5
 - Tested vulnerable versions: 24.53, 24.54, 24.55
+- References: CVE-2021-1000004
 - Timeline:
     - Report date: 2021-02-10
 	- Triaged: 2021-02-12
