@@ -99,7 +99,7 @@ By abusing this vulnerability, an attacker is able to crash any FreeSWITCH insta
     ```
 5. Notice that the memory consumption of FreeSWITCH increases rapidly over time, until FreeSWITCH is killed by the underlying operating system
 
-Note that in some cases where the test machine under attack has more memory resources, the attack done over UDP may not succeed in consuming all system memory. During our testing with SIPVicious PRO, however, we could always get the process to consume all the system's memory when the attack is done cover TCP.
+Note that in some cases where the test machine under attack has more memory resources, the attack done over UDP may not succeed in consuming all system memory. During our testing with SIPVicious PRO, however, we could always get the process to consume all the system's memory when the attack is done over TCP.
 
 ## Solution and recommendations
 

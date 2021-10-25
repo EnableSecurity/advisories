@@ -60,7 +60,7 @@ Upgrade to a version of FreeSWITCH that fixes this issue.
 
 Our suggestion to the FreeSWITCH developers was the following:
 
-> Our recommendation is that this SIP message type is authenticated by default so that FreeSWITCH administrators do not need to be explicitly set the `auth-messages` parameter. When following such a recommendation, a new parameter can be introduced to explicitly disable authentication.
+> Our recommendation is that this SIP message type is authenticated by default so that FreeSWITCH administrators do not need to explicitly set the `auth-messages` parameter. When following such a recommendation, a new parameter can be introduced to explicitly disable authentication.
 
 ## About Enable Security
 
