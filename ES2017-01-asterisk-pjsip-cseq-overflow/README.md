@@ -4,7 +4,7 @@
     - Alfred Farrugia <alfred@enablesecurity.com>
     - Sandro Gauci <sandro@enablesecurity.com>
 - Vulnerable version: Asterisk 14.4.0 running `chan_pjsip`, PJSIP 2.6
-- References: AST-2017-002
+- References: AST-2017-002, CVE-2017-9372
 - Enable Security Advisory: <https://github.com/EnableSecurity/advisories/tree/master/ES2017-01-asterisk-pjsip-cseq-overflow>
 - Vendor Advisory: <http://downloads.asterisk.org/pub/security/AST-2017-002.html>
 - Timeline:
