@@ -1,0 +1,10 @@
+sequenceDiagram
+    Caller->>Asterisk: SIP INVITE
+    Asterisk->>Caller: SIP 100 Trying
+    Asterisk->>Caller: SIP 200 OK
+    Caller->>Asterisk: SIP ACK
+    Caller->>Asterisk: STUN Binding Request
+    Asterisk->>Caller: STUN Binding Success Response
+    Attacker->>Asterisk: DTLS Client Hello
+    Asterisk->>Caller: DTLS Alert
+    Asterisk->>Caller: SIP BYE Q.850 cause=0

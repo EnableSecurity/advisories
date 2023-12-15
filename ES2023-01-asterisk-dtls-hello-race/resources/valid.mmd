@@ -1,0 +1,13 @@
+sequenceDiagram
+    Caller->>Asterisk: SIP INVITE
+    Asterisk->>Caller: SIP 100 Trying
+    Asterisk->>Caller: SIP 200 OK
+    Caller->>Asterisk: SIP ACK
+    Caller->>Asterisk: STUN Binding Request
+    Asterisk->>Caller: STUN Binding Success Response
+    Caller->>Asterisk: DTLS Client Hello
+    Asterisk->>Caller: DTLS Server Hello
+    Asterisk->>Caller: DTLS Certificate
+    Asterisk->>Caller: DTLS Server Key Exchange
+    Asterisk->>Caller: DTLS Certificate Request
+    Asterisk->>Caller: DTLS Server Hello Done
