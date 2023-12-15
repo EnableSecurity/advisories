@@ -120,7 +120,8 @@ Abuse of this vulnerability may lead to a massive Denial of Service on vulnerabl
 			exit;
 		}
 	}
-```
+   ```
+
 1. Send an INVITE message to Kamailio with WebRTC SDP:
 
     ```default
