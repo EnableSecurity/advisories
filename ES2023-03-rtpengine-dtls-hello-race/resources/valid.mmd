@@ -1,0 +1,11 @@
+sequenceDiagram
+    Caller->>Kamailio: SIP INVITE
+    Kamailio->>RTPEngine: rtpengine_manage()
+    RTPEngine->>Caller: STUN Binding Request
+    Caller->>RTPEngine: STUN Binding Response
+    Caller->>RTPEngine: DTLS Client Hello
+    RTPEngine->>Caller: DTLS Server Hello
+    RTPEngine->>Caller: DTLS Certificate
+    RTPEngine->>Caller: DTLS Server Key Exchange
+    RTPEngine->>Caller: DTLS Certificate Request
+    RTPEngine->>Caller: DTLS Server Hello Done

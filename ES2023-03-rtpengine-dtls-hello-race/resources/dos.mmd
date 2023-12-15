@@ -1,0 +1,7 @@
+sequenceDiagram
+    Caller->>Kamailio: SIP INVITE
+    Kamailio->>RTPEngine: rtpengine_manage()
+    RTPEngine->>Caller: STUN Binding Request
+    Caller->>RTPEngine: STUN Binding Response
+    Attacker->>RTPEngine: DTLS Client Hello
+    
