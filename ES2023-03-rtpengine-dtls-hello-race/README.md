@@ -3,6 +3,7 @@
 - Fixed versions: mr12.1.1.2, mr12.0.1.3, mr11.5.1.16, mr10.5.6.3, mr10.5.6.2, mr9.5.8.2, mr8.5.12.2
 - Enable Security Advisory: https://github.com/EnableSecurity/advisories/tree/master/ES2023-03-rtpengine-dtls-hello-race
 - Vendor Patch: https://github.com/sipwise/rtpengine/commit/e969a79428ac4a15cdf1c0a1c6f266dbdc7e60b6
+- Other references: CVE-2023-51275
 - Tested vulnerable versions: mr11.5.1.6
 - Timeline:
 	- Report date: 2023-10-02
