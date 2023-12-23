@@ -1,0 +1,8 @@
+sequenceDiagram
+    Caller->>FreeSWITH: SIP INVITE
+    FreeSWITH->>Caller: SIP 100 Trying
+    FreeSWITH->>Caller: SIP 200 OK
+    Caller->>FreeSWITH: SIP ACK
+    Attacker->>FreeSWITH: DTLS Client Hello
+    FreeSWITH->>Caller: DTLS Alert
+    FreeSWITH->>Caller: SIP BYE Q.850 cause=27

@@ -1,0 +1,11 @@
+sequenceDiagram
+    Caller->>FreeSWITCH: SIP INVITE
+    FreeSWITCH->>Caller: SIP 100 Trying
+    FreeSWITCH->>Caller: SIP 200 OK
+    Caller->>FreeSWITCH: SIP ACK
+    Caller->>FreeSWITCH: DTLS Client Hello
+    FreeSWITCH->>Caller: DTLS Server Hello
+    FreeSWITCH->>Caller: DTLS Certificate
+    FreeSWITCH->>Caller: DTLS Server Key Exchange
+    FreeSWITCH->>Caller: DTLS Certificate Request
+    FreeSWITCH->>Caller: DTLS Server Hello Done
