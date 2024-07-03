@@ -25,11 +25,11 @@ This behavior was tested against FreeSWITCH version 1.10.10, which was found to 
 The following sequence diagram shows the normal flow (i.e. no attack) involving SIP and DTLS messages between a UAC (the Caller) and an FreeSWITCH server capable of handling WebRTC calls.
 
 Diagram showing a call setup against FreeSWITCH that uses SIP and DTLS:
-![Diagram showing a call setup against FreeSWITCH that uses SIP and DTLS](https://user-images.githubusercontent.com/4557407/271063734-85425e09-6945-49b1-ba73-751b6d592ea4.png)
+![Diagram showing a call setup against FreeSWITCH that uses SIP and DTLS](resources/valid.png)
 
 In a controlled experiment, it was observed that when the Attacker sent a DTLS ClientHello to FreeSWITCH's media port from a different IP and port, FreeSWITCH responded by sending a DTLS Alert to the Caller. Additionally, FreeSWITCH terminated the SIP call by sending a BYE message to the Caller.
 
-![Diagram showing a call setup against FreeSWITCH that fails due to an attacker controlled DTLS ClientHello](https://user-images.githubusercontent.com/4557407/271064011-032f9a0e-15af-4645-b008-1fe8b706d75e.png)
+![Diagram showing a call setup against FreeSWITCH that fails due to an attacker controlled DTLS ClientHello](resources/dos.png)
 
 During a real attack, the attacker would spray a vulnerable FreeSWITCH server with DTLS ClientHello messages. The attacker would typically target the range of UDP ports allocated for RTP. When the ClientHello message from the Attacker wins the race against an expected ClientHello from the Caller, the call terminates, resulting in Denial of Service.
 
