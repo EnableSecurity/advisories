@@ -44,7 +44,7 @@ Rtpengine provides the following learning modes through the `--endpoint-learning
 
 - `immediate`: learns the address from the very first incoming packet, with no delay.
 
-- `no-learning`: disables learning entirely, which is the only mode that is not vulnerable but can break connectivity for clients behind NAT.
+- `off` (no-learning): disables learning entirely, which is the only mode that is not vulnerable but can break connectivity for clients behind NAT.
 
 - `heuristic`: combines a 3-second delay with a ranking system that prefers addresses matching the original SDP, falling back to partial matches or any observed address if necessary.
 
