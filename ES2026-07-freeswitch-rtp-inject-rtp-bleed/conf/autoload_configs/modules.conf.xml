@@ -1,0 +1,9 @@
+<configuration name="modules.conf" description="Isolated RTP comparison lab">
+  <modules>
+    <load module="mod_console"/>
+    <load module="mod_logfile"/>
+    <load module="mod_sofia"/>
+    <load module="mod_dptools"/>
+    <load module="mod_dialplan_xml"/>
+  </modules>
+</configuration>
