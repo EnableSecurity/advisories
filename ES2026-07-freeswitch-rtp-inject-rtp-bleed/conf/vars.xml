@@ -1,0 +1,4 @@
+<include>
+  <X-PRE-PROCESS cmd="set" data="global_codec_prefs=PCMU,PCMA"/>
+  <X-PRE-PROCESS cmd="set" data="external_sip_port=5080"/>
+</include>

@@ -1,0 +1,52 @@
+name: es2026-07-rtp-source-learning
+
+x-target: &target
+  command: ["-nf", "-nonat"]
+  volumes:
+    - ./conf:/usr/local/freeswitch/conf:ro
+  networks: [lab]
+  restart: "no"
+
+services:
+  before:
+    <<: *target
+    image: es2026-07-freeswitch:before-v1.10.12
+    build:
+      context: .
+      args:
+        TAG: v1.10.12
+        REF: a88d069d6ffb74df797bcaf001f7e63181c07a09
+    profiles: [before]
+
+  after-default:
+    <<: *target
+    image: es2026-07-freeswitch:after-v1.11.2
+    build:
+      context: .
+      args:
+        TAG: v1.11.2
+        REF: 3f13ad1b1d323e435757fc43a2bb829d4ea5b9a8
+    profiles: [after-default]
+
+  after-configured:
+    <<: *target
+    image: es2026-07-freeswitch:after-v1.11.2
+    build:
+      context: .
+      args:
+        TAG: v1.11.2
+        REF: 3f13ad1b1d323e435757fc43a2bb829d4ea5b9a8
+    profiles: [after-configured]
+
+  runner:
+    image: python:3.11-alpine
+    entrypoint: ["python3", "/lab/probe.py"]
+    volumes:
+      - ./probe.py:/lab/probe.py:ro
+      - ./results:/artifacts
+    networks: [lab]
+    profiles: [probe]
+
+networks:
+  lab:
+    driver: bridge

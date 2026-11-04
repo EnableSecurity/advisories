@@ -1,0 +1,35 @@
+<include>
+  <extension name="rtp-source-validation-default">
+    <condition field="destination_number" expression="^5590$">
+      <action application="answer"/>
+      <action application="playback" data="tone_stream://%(10000,0,440)"/>
+      <action application="hangup"/>
+    </condition>
+  </extension>
+
+  <extension name="rtp-source-validation-mitigated">
+    <condition field="destination_number" expression="^5591$">
+      <action application="set" data="rtp_auto_adjustment_wait_for_advertised_ms=3000"/>
+      <action application="set" data="rtp_packet_not_advertised_reject_threshold=5"/>
+      <action application="answer"/>
+      <action application="playback" data="tone_stream://%(10000,0,440)"/>
+      <action application="hangup"/>
+    </condition>
+  </extension>
+
+  <extension name="rtp-injection-echo-default">
+    <condition field="destination_number" expression="^5592$">
+      <action application="answer"/>
+      <action application="echo"/>
+    </condition>
+  </extension>
+
+  <extension name="rtp-injection-echo-mitigated">
+    <condition field="destination_number" expression="^5593$">
+      <action application="set" data="rtp_auto_adjustment_wait_for_advertised_ms=3000"/>
+      <action application="set" data="rtp_packet_not_advertised_reject_threshold=5"/>
+      <action application="answer"/>
+      <action application="echo"/>
+    </condition>
+  </extension>
+</include>
